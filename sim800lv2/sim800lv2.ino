@@ -1,6 +1,6 @@
 #include <SoftwareSerial.h>
 
-SoftwareSerial sim800l(0, 4);//tx/rx
+SoftwareSerial sim800l;
 
 
 // Define the phone number as a variable
@@ -11,7 +11,7 @@ void setup() {
   Serial.begin(9600);
   
   // Set up software serial for SIM800L communication
-  sim800l.begin(9600);
+  sim800l.begin(9600,0,4);//tx 0 = D2, rx 4 = D3
   
 }
 
